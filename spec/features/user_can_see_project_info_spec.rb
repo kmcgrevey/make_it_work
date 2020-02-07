@@ -6,7 +6,7 @@ RSpec.describe 'When I visit a project page', type: :feature do
                                    project_budget: 1000)
     project1 = Project.create!(name: 'Litfit',
                                material: 'Lamp Shade',
-                               challenge_id: challenge1)
+                               challenge_id: challenge1.id)
     visit "/projects/:id"
 
     expect(page).to have_content(project1.name)
